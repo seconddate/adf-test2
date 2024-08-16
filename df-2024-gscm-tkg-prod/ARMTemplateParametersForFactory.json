@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "df-2024-gscm-tkg-prod"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureSQLAdminServicePrincipal_servicePrincipalCredential": {
+			"value": ""
+		},
+		"AzureSQLCollaboratorServicePrincipal_servicePrincipalCredential": {
+			"value": ""
+		},
+		"Oracle1_connectionString": {
+			"value": ""
+		},
+		"TKG_SQL_TEST_password": {
+			"value": ""
+		},
+		"hyperscalesql_connectionString": {
+			"value": ""
+		},
+		"vcoresql_connectionString": {
+			"value": ""
+		},
+		"AzureSQLAdminServicePrincipal_properties_typeProperties_server": {
+			"value": "ayaan-test.database.windows.net"
+		},
+		"AzureSQLAdminServicePrincipal_properties_typeProperties_database": {
+			"value": "mssql-tkg-test"
+		},
+		"AzureSQLAdminServicePrincipal_properties_typeProperties_servicePrincipalId": {
+			"value": "c97cbace-1eba-4691-b1f9-d6d361c84e21"
+		},
+		"AzureSQLAdminServicePrincipal_properties_typeProperties_tenant": {
+			"value": "4aed9820-113d-4f48-9f53-4d91f37ad279"
+		},
+		"AzureSQLCollaboratorServicePrincipal_properties_typeProperties_server": {
+			"value": "ayaan-test.database.windows.net"
+		},
+		"AzureSQLCollaboratorServicePrincipal_properties_typeProperties_database": {
+			"value": "mssql-tkg-test"
+		},
+		"AzureSQLCollaboratorServicePrincipal_properties_typeProperties_servicePrincipalId": {
+			"value": "bd62f9c0-4e45-40c0-a4fb-f3d9f9801dd1"
+		},
+		"AzureSQLCollaboratorServicePrincipal_properties_typeProperties_tenant": {
+			"value": "4aed9820-113d-4f48-9f53-4d91f37ad279"
+		},
+		"TKG_SQL_TEST_properties_typeProperties_server": {
+			"value": "ayaan-test.database.windows.net"
+		},
+		"TKG_SQL_TEST_properties_typeProperties_database": {
+			"value": "mssql-tkg-test"
+		},
+		"TKG_SQL_TEST_properties_typeProperties_userName": {
+			"value": "ayaan"
+		}
+	}
+}

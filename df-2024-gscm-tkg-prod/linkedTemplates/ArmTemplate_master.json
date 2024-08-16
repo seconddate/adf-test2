@@ -1,0 +1,188 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory 이름",
+			"defaultValue": "df-2024-gscm-tkg-prod"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "'AzureBlobStorage1'의 'connectionString'에 대한 보안 문자열"
+		},
+		"AzureSQLAdminServicePrincipal_servicePrincipalCredential": {
+			"type": "secureString",
+			"metadata": "'AzureSQLAdminServicePrincipal'의 'servicePrincipalCredential'에 대한 보안 문자열"
+		},
+		"AzureSQLCollaboratorServicePrincipal_servicePrincipalCredential": {
+			"type": "secureString",
+			"metadata": "'AzureSQLCollaboratorServicePrincipal'의 'servicePrincipalCredential'에 대한 보안 문자열"
+		},
+		"Oracle1_connectionString": {
+			"type": "secureString",
+			"metadata": "'Oracle1'의 'connectionString'에 대한 보안 문자열"
+		},
+		"TKG_SQL_TEST_password": {
+			"type": "secureString",
+			"metadata": "'TKG_SQL_TEST'의 'password'에 대한 보안 문자열"
+		},
+		"hyperscalesql_connectionString": {
+			"type": "secureString",
+			"metadata": "'hyperscalesql'의 'connectionString'에 대한 보안 문자열"
+		},
+		"vcoresql_connectionString": {
+			"type": "secureString",
+			"metadata": "'vcoresql'의 'connectionString'에 대한 보안 문자열"
+		},
+		"AzureSQLAdminServicePrincipal_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "ayaan-test.database.windows.net"
+		},
+		"AzureSQLAdminServicePrincipal_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "mssql-tkg-test"
+		},
+		"AzureSQLAdminServicePrincipal_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "c97cbace-1eba-4691-b1f9-d6d361c84e21"
+		},
+		"AzureSQLAdminServicePrincipal_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "4aed9820-113d-4f48-9f53-4d91f37ad279"
+		},
+		"AzureSQLCollaboratorServicePrincipal_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "ayaan-test.database.windows.net"
+		},
+		"AzureSQLCollaboratorServicePrincipal_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "mssql-tkg-test"
+		},
+		"AzureSQLCollaboratorServicePrincipal_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "bd62f9c0-4e45-40c0-a4fb-f3d9f9801dd1"
+		},
+		"AzureSQLCollaboratorServicePrincipal_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "4aed9820-113d-4f48-9f53-4d91f37ad279"
+		},
+		"TKG_SQL_TEST_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "ayaan-test.database.windows.net"
+		},
+		"TKG_SQL_TEST_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "mssql-tkg-test"
+		},
+		"TKG_SQL_TEST_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "ayaan"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "스토리지 계정 연결 된 ARM 서식 파일을 포함 하는 URI입니다."
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "연결된 ARM 템플릿을 포함하는 스토리지 계정에 대한 SAS 토큰"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "df-2024-gscm-tkg-prod_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureSQLAdminServicePrincipal_servicePrincipalCredential": {
+						"value": "[parameters('AzureSQLAdminServicePrincipal_servicePrincipalCredential')]"
+					},
+					"AzureSQLCollaboratorServicePrincipal_servicePrincipalCredential": {
+						"value": "[parameters('AzureSQLCollaboratorServicePrincipal_servicePrincipalCredential')]"
+					},
+					"Oracle1_connectionString": {
+						"value": "[parameters('Oracle1_connectionString')]"
+					},
+					"TKG_SQL_TEST_password": {
+						"value": "[parameters('TKG_SQL_TEST_password')]"
+					},
+					"hyperscalesql_connectionString": {
+						"value": "[parameters('hyperscalesql_connectionString')]"
+					},
+					"vcoresql_connectionString": {
+						"value": "[parameters('vcoresql_connectionString')]"
+					},
+					"AzureSQLAdminServicePrincipal_properties_typeProperties_server": {
+						"value": "[parameters('AzureSQLAdminServicePrincipal_properties_typeProperties_server')]"
+					},
+					"AzureSQLAdminServicePrincipal_properties_typeProperties_database": {
+						"value": "[parameters('AzureSQLAdminServicePrincipal_properties_typeProperties_database')]"
+					},
+					"AzureSQLAdminServicePrincipal_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('AzureSQLAdminServicePrincipal_properties_typeProperties_servicePrincipalId')]"
+					},
+					"AzureSQLAdminServicePrincipal_properties_typeProperties_tenant": {
+						"value": "[parameters('AzureSQLAdminServicePrincipal_properties_typeProperties_tenant')]"
+					},
+					"AzureSQLCollaboratorServicePrincipal_properties_typeProperties_server": {
+						"value": "[parameters('AzureSQLCollaboratorServicePrincipal_properties_typeProperties_server')]"
+					},
+					"AzureSQLCollaboratorServicePrincipal_properties_typeProperties_database": {
+						"value": "[parameters('AzureSQLCollaboratorServicePrincipal_properties_typeProperties_database')]"
+					},
+					"AzureSQLCollaboratorServicePrincipal_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('AzureSQLCollaboratorServicePrincipal_properties_typeProperties_servicePrincipalId')]"
+					},
+					"AzureSQLCollaboratorServicePrincipal_properties_typeProperties_tenant": {
+						"value": "[parameters('AzureSQLCollaboratorServicePrincipal_properties_typeProperties_tenant')]"
+					},
+					"TKG_SQL_TEST_properties_typeProperties_server": {
+						"value": "[parameters('TKG_SQL_TEST_properties_typeProperties_server')]"
+					},
+					"TKG_SQL_TEST_properties_typeProperties_database": {
+						"value": "[parameters('TKG_SQL_TEST_properties_typeProperties_database')]"
+					},
+					"TKG_SQL_TEST_properties_typeProperties_userName": {
+						"value": "[parameters('TKG_SQL_TEST_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "df-2024-gscm-tkg-prod_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'df-2024-gscm-tkg-prod_ArmTemplate_0')]"
+			]
+		}
+	]
+}
