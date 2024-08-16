@@ -1,0 +1,9 @@
+{
+	"name": "df-2024-gscm-tkg-prod",
+	"location": "koreacentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "07540516-1259-4f1c-8f6a-e28f85e85817",
+		"tenantId": "4aed9820-113d-4f48-9f53-4d91f37ad279"
+	}
+}

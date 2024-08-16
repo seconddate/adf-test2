@@ -1,0 +1,17 @@
+{
+	"name": "vcoresql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "vcoresql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "sample"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

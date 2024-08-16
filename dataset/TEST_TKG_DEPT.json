@@ -1,0 +1,27 @@
+{
+	"name": "TEST_TKG_DEPT",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "TKG_SQL_TEST",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "DeptID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DeptName",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "TKG_TEST"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,17 @@
+{
+	"name": "hyper_sample",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "hyperscalesql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "sample"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

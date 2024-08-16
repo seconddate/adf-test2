@@ -1,0 +1,18 @@
+{
+	"name": "AzureSQLAdminServicePrincipal",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "ayaan-test.database.windows.net",
+			"database": "mssql-tkg-test",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "ServicePrincipal",
+			"servicePrincipalId": "c97cbace-1eba-4691-b1f9-d6d361c84e21",
+			"tenant": "4aed9820-113d-4f48-9f53-4d91f37ad279",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDlBNzU4NUEyLTFGMTAtNDk5Ni04N0U0LTQ2NkE3QjYyQ0Q3MV9kYWQ5M2Q0YS1lZjc0LTRmMmQtYjA4Ny0yMjI1MmMyYzM4N2IiDQp9"
+		}
+	}
+}
